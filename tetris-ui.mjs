@@ -1,4 +1,4 @@
-import {Tetris,SHAPES,seededRandom} from './tetris.mjs';
+import {Tetris,SHAPES,seededRandom} from './tetris.mjs?v=leaderboard-1';
 const $=id=>document.getElementById(id), canvas=$('board'),ctx=canvas.getContext('2d'),preview=$('next'),px=preview.getContext('2d');
 let game=new Tetris(); let mode='ready',best=0,gravity=0,ground=0,resets=0,last=0,raf=0,holdTimer=0,repeatTimer=0;
 try{best=Math.max(0,Number(localStorage.getItem('louis-tetris-best'))||0);}catch{}
@@ -109,3 +109,4 @@ $('score-entry').addEventListener('submit',async e=>{
 
 setMode('ready');
 refreshScores();
+
