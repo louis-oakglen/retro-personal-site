@@ -1,3 +1,8 @@
+export function seededRandom(seed) {
+  let state = seed >>> 0;
+  return () => { state = (Math.imul(1664525, state) + 1013904223) >>> 0; return state / 4294967296; };
+}
+
 export const SHAPES = [
   [[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]],
   [[1,1],[1,1]],
